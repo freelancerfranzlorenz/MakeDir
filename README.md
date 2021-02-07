@@ -5,7 +5,7 @@ This tool creates a programmable folder structure on your local computer.
 
 ## Installation
 The installation of the tool is very simple - just copy the executable to your local computer
-in a directory of your choice (perhaps c:\programms\makedir).
+in a directory of your choice (perhaps c:\programs\makedir).
 After this, start the tool by :
 * right-click on the executable on your local machine
 * select 'execute as administrator'
@@ -14,6 +14,19 @@ After this, start the tool by :
 If this was done, a dialog appears with buttons.
 Click on the "install" button - in the log window below, you will see, what happens.
 If no error message appears, then all is done...
+
+## UN-Install
+The un-install (remove) of the tool is also very simple.
+Change in the directory, where the tool was copied before (perhaps c:\programs\makedir).
+After this, start the tool by :
+* right-click on the executable on your local machine
+* select 'execute as administrator'
+* confirm by click with the left mouse button
+
+If this was done, a dialog appears with buttons.
+Click on the "Uninstall" button - in the log window below, you will see, what happens.
+If no error message appears, then all is done...
+Close the dialog and delete the tool from your disk.
 
 ## Configuration
 The configuration of your folder structure is set in the configuration file.
