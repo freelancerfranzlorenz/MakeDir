@@ -4,7 +4,7 @@
 This tool creates a programmable folder structure on your local computer.
 
 ## Installation
-The installation of the tool is very simple - just copy the executable to ypur local computer
+The installation of the tool is very simple - just copy the executable to your local computer
 in a directory of your choice (perhaps c:\programms\makedir).
 After this, start the tool by :
 * right-click on the executable on your local machine
@@ -14,6 +14,18 @@ After this, start the tool by :
 If this was done, a dialog appears with buttons.
 Click on the "install" button - in the log window below, you will see, what happens.
 If no error message appears, then all is done...
+
+## Configuration
+The configuration of your folder structure is set in the configuration file.
+The configuration file (makedir.conf) is located in the same folder as the
+executable makedir.exe.
+
+* The configuration file is an ascii coded text file.
+* Each line contains only one command or comment.
+* Comment lines starts with the character '#'. These lines will not be evaluated
+* Directory setup lines starts with the command 'dir='.
+* After the command 'dir=' the path must be followed
+* Path must ALWAYS start with an backslash character '\'
 
 ## Usage
 You can use the tool in the windows explorer content menu or by command line.
