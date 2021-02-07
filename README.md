@@ -32,4 +32,4 @@ You can use the tool in the windows explorer content menu or by command line.
  
 * Use in command line (2)
  1. Open a console window
- 2. Type in "makedir <full qualified folder name>"
+ 2. Type in "makedir &lt;full qualified folder name&gt;"
