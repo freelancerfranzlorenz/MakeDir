@@ -25,7 +25,20 @@ executable makedir.exe.
 * Comment lines starts with the character '#'. These lines will not be evaluated
 * Directory setup lines starts with the command 'dir='.
 * After the command 'dir=' the path must be followed
-* Path must ALWAYS start with an backslash character '\'
+* Path must ALWAYS start with an backslash character '\\'
+
+Here is an example of a configuration file:
+```
+#
+# This is an example configuration
+# 
+dir=\documents
+dir=\sources
+dir=\sources\doc
+dir=\sources\dat
+dir=\tools
+#
+```
 
 ## Usage
 You can use the tool in the windows explorer content menu or by command line.
