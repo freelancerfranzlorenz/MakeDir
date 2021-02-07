@@ -26,6 +26,7 @@ executable makedir.exe.
 * Directory setup lines starts with the command 'dir='.
 * After the command 'dir=' the path must be followed
 * Path must ALWAYS start with an backslash character '\\'
+* The directories must be defined in order, i.e. first the root directory and then the directories of the root directory
 
 Here is an example of a configuration file:
 ```
