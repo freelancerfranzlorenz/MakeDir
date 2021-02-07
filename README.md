@@ -16,3 +16,20 @@ Click on the "install" button - in the log window below, you will see, what happ
 If no error message appears, then all is done...
 
 ## Usage
+You can use the tool in the windows explorer content menu or by command line.
+
+* Use in windows explorer menu
+ 1. Open the windows explorer
+ 2. Select a directory, where you want to create your directory structure
+ 3. Click at this directory with the right mouse button
+ 4. In the upcoming menu, select "MakeDir"
+ 5. That's it!
+
+* Use in command line (1)
+ 1. Open a console window
+ 2. Navigate to the directory, where you want to create your directory structure
+ 3. Type in "makedir ."
+ 
+* Use in command line (2)
+ 1. Open a console window
+ 2. Type in "makedir <full qualified folder name>"
