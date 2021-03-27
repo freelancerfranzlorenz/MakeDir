@@ -1,5 +1,8 @@
 # MakeDir
 
+## History
+v2 Adding new command base= in config file
+
 ## Why this tool
 This tool creates a programmable folder structure on your local computer.
 
