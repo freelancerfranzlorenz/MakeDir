@@ -17,7 +17,8 @@ namespace makedir
          * This list contains the directories, which
          * must be created by the tool.
          */
-        static List<string> aListDirs = new List<string>();  
+        static List<string> m_aListDirs = new List<string>();
+        static String m_sBaseDir = "";
 
         /**
          * This function reads the configuration file
@@ -38,7 +39,11 @@ namespace makedir
                     {                                                           //  no, then...
                         if( sLine.StartsWith( "dir=" ) )                        //  directory line?
                         {                                                       //   yes, then...
-                            aListDirs.Add(sLine.Substring(4));                  //   get the directory entry
+                            m_aListDirs.Add(sLine.Substring(4));                //   get the directory entry
+                        }
+                        else if( sLine.StartsWith( "base=" ) )                  //  base naming? 
+                        {                                                       //   yes, then...
+                            m_sBaseDir = sLine.Substring(5);                    //   get the base dir
                         }
                     }   //if()
                 }   //foreach()
@@ -54,14 +59,23 @@ namespace makedir
          * of the project.
          * @param   sBaseDir    base directory without finish \\
          */
-        static void makeProjectDir(string sBaseDir)
+        static void makeProjectDir( string sBaseDir )
         {
-            sBaseDir += "\\" + DateTime.Now.ToString("yyyyMMdd") + "_PROJECTNAME";
+            sBaseDir += "\\";                                                   //add backslash
+            if( m_sBaseDir.Length > 0 )                                         //get basedir naming?
+            {                                                                   // yes, then...
+                sBaseDir += m_sBaseDir;                                         //  add user basedir name
+                String sYMD = DateTime.Now.ToString( "yyyyMMdd" );              //  get current date
+                if( sBaseDir.IndexOf( "<YMD>" ) >= 0 )                          //  macro <YMD> found?
+                {                                                               //   yes, then...
+                    sBaseDir = sBaseDir.Replace( "<YMD>", sYMD );               //   replace macro with current date
+                }
+            }
             string sCurDir = sBaseDir;                                          //set the base directory
             try
             {
-                Directory.CreateDirectory(sBaseDir);                            //create the base dir
-                foreach ( string sDir in aListDirs.ToArray() )                  //step through all readen directories
+                Directory.CreateDirectory( sBaseDir );                          //create the base dir
+                foreach( string sDir in m_aListDirs.ToArray() )                 //step through all readen directories
                 {                                                               // then...
                     Console.WriteLine("info : create '"+sBaseDir+sDir+"'");     // echo the directory
                     Directory.CreateDirectory(sBaseDir+sDir );                  // create this directory

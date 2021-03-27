@@ -74,7 +74,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "makedir Tool v1 (c) Franz Lorenz";
+            this.Text = "makedir Tool v2 (c) Franz Lorenz";
             this.ResumeLayout(false);
 
       }
