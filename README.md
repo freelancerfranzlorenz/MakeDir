@@ -37,18 +37,28 @@ The configuration file (makedir.conf) is located in the same folder as the
 executable makedir.exe.
 
 * The configuration file is an ascii coded text file.
-* Each line contains only one command or comment.
+* Each line contains only ONE command or comment.
 * Comment lines starts with the character '#'. These lines will not be evaluated
-* Directory setup lines starts with the command 'dir='.
+* Base directory setup starts with the command 'base='
+* Directory setup lines starts with the command 'dir='
 * After the command 'dir=' the path must be followed
 * Path must ALWAYS start with an backslash character '\\'
 * The directories must be defined in order, i.e. first the root directory and then the directories of the root directory
+
+### Base Directory
+The base directory is the first directory, that this tool creates. If no base command is in the config file or the 
+base directory is not set to a value, then NO base directory will be created.<br/>
+You can use any file name for the base directory. If the string '<YMD>' is found in the name, then
+the tool replaces these string with the current date in the format "YYYYMMDD".
+For example, if the current date is 2021-03-01, then the base directory name of 'base=<YMD>_Projectname'
+will create the directory "20210301_Projectname" on your local disk.
 
 Here is an example of a configuration file:
 ```
 #
 # This is an example configuration
 # 
+base=<YMD>_Projectname
 dir=\documents
 dir=\sources
 dir=\sources\doc
